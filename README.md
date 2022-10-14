@@ -33,7 +33,7 @@ tar xzvf nginx-1.16.1.tar.gz
 
 As well as quiche, the underlying implementation of HTTP/3 and QUIC:
 ```
-git clone --recursive https://github.com/cloudflare/quich
+git clone --recursive https://github.com/cloudflare/quiche
 ```
 
 Next you’ll need to apply the patch to NGINX:
