@@ -1,5 +1,10 @@
 # nginx on Debian.
 
+```
+apt install cmake
+apt install cargo
+```
+
 Requirements
 ------------
 
