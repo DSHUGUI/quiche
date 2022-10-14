@@ -27,24 +27,24 @@ only works with the 1.16.x release branch (the latest stable release being
 1.16.1).
 
 ```
- % curl -O https://nginx.org/download/nginx-1.16.1.tar.gz
- % tar xzvf nginx-1.16.1.tar.gz
+curl -O https://nginx.org/download/nginx-1.16.1.tar.gz
+tar xzvf nginx-1.16.1.tar.gz
 ```
 
 As well as quiche, the underlying implementation of HTTP/3 and QUIC:
 ```
- % git clone --recursive https://github.com/cloudflare/quiche
+git clone --recursive https://github.com/cloudflare/quich
 ```
 
 Next you’ll need to apply the patch to NGINX:
 ```
- % cd nginx-1.16.1
- % patch -p01 < ../quiche/nginx/nginx-1.16.patch
+cd nginx-1.16.1
+patch -p01 < ../quiche/nginx/nginx-1.16.patch
 ```
 
 And finally build NGINX with HTTP/3 support enabled:
 ```
- % ./configure                                 \
+./configure                                 \
        --prefix=$PWD                           \
        --build="quiche-$(git --git-dir=../quiche/.git rev-parse --short HEAD)" \
        --with-http_ssl_module                  \
@@ -52,7 +52,7 @@ And finally build NGINX with HTTP/3 support enabled:
        --with-http_v3_module                   \
        --with-openssl=../quiche/quiche/deps/boringssl \
        --with-quiche=../quiche
- % make
+make
 ```
 
 The (optional) `--build` argument will embed the latest commit hash from the
