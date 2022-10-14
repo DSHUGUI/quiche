@@ -1,4 +1,4 @@
-#nginx on Debian.
+# nginx on Debian.
 
 Requirements
 ------------
