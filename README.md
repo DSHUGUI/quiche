@@ -1,7 +1,4 @@
-QUIC NGINX ON Debian Linux.
-
-
-
+#nginx on Debian.
 
 Requirements
 ------------
