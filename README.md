@@ -4,33 +4,7 @@
 apt install cmake
 apt install cargo
 
-
-
-
-
 apt-get install libpcre3 libpcre3-dev
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 apt install libssl-dev
 ```
